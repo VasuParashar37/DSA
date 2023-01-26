@@ -1,0 +1,27 @@
+public class binarysearch {
+    public static int bisearch(int arr[],int ele)
+    {
+        int start=0,end=arr.length-1;
+        while(start<=end)
+        {
+            int mid=(start+end)/2;
+            if(arr[mid]==ele) {
+                return mid;
+            }
+            if(arr[mid]<ele)
+            {
+                start=mid+1;
+            }
+            else {
+                end=mid-1;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        int arr[]={2,4,6,8,10,12,14};
+//        int ele=6;
+        System.out.println(bisearch(arr,10));
+    }
+}
