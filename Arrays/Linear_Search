@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class linearsearch {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n[]={1,2,3,6,4,5,78};
+        int key=6;
+        int index=ls(n,key);
+        if(index==-1)
+            System.out.println("Not Found");
+        else
+            System.out.println("Found at "+index);
+    }
+    public static int ls(int n[],int key )
+    {
+        for (int i = 1; i <=n.length; i++) {
+            if(n[i]==key)
+                return i;
+        }
+        return -1;
+    }
+}
